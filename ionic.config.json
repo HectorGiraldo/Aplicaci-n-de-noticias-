@@ -1,5 +1,7 @@
 {
   "name": "4.noticias",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
