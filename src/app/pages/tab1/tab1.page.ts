@@ -27,7 +27,7 @@ export class Tab1Page implements OnInit {
 
   loadData( event ) {
 
-    // console.log( event );
+    // console.log( 'tab1', event );
     this.cargarNoticias( event );
 
   }
@@ -35,7 +35,7 @@ export class Tab1Page implements OnInit {
   cargarNoticias( event? ) {
     this.noticiasService.topHeadlines().subscribe( resp => {
 
-      // console.log('noticias', resp );
+      console.log('noticias', resp );
 
       if ( resp.articles.length === 0) {
         // event.target.disabled = true;
@@ -46,9 +46,13 @@ export class Tab1Page implements OnInit {
 
       this.noticias.push( ...resp.articles );
 
+      console.log('lleno', this.noticias);
+
       if ( event ) {
         event.target.complete();
       }
     });
   }
+
+
 }
