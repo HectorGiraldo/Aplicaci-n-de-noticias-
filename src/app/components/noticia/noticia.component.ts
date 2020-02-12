@@ -18,6 +18,7 @@ export class NoticiaComponent implements OnInit {
   @Input() index: number;
   @Input() enFavoritos;
 
+
   constructor(
     private iab: InAppBrowser,
     private actionSheetCtrl: ActionSheetController,
@@ -34,6 +35,10 @@ export class NoticiaComponent implements OnInit {
     console.log('noticia', this.noticia.url);
     const browser = this.iab.create(this.noticia.url, '_system');
 
+  }
+
+  updateUrl( event ) {
+    event.target.src = 'assets/no-image.png';
   }
 
 

@@ -46,8 +46,6 @@ export class Tab1Page implements OnInit {
 
       this.noticias.push( ...resp.articles );
 
-      console.log('lleno', this.noticias);
-
       if ( event ) {
         event.target.complete();
       }
